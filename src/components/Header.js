@@ -9,9 +9,6 @@ const header = () => {
         My todos
       </Link>
       <div className="right menu">
-        <Link to="/" className="item">
-          All Todos
-        </Link>
         <GoogleAuth />
       </div>
     </div>

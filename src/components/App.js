@@ -1,6 +1,7 @@
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
-import GoogleAuth from "./GoogleAuth";
+import TodosList from "./TodosList";
+
 import Header from "./Header";
 import history from "../history";
 
@@ -9,7 +10,9 @@ const App = () => {
     <Router history={history}>
       <div>
         <Header />
-        <div>App</div>
+        <Switch>
+          <Route path="/" exact component={TodosList} />
+        </Switch>
       </div>
     </Router>
   );
