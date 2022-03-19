@@ -4,11 +4,15 @@ import { createTodo } from "../actions";
 import TodoForm from "./TodoForm";
 
 class TodoCreate extends Component {
+  onSubmit = (formValues) => {
+    this.props.createTodo(formValues);
+  };
+
   render() {
     return (
       <div>
         <h3>Create Todo</h3>
-        <TodoForm />
+        <TodoForm onSubmit={this.onSubmit} />
       </div>
     );
   }

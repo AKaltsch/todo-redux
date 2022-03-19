@@ -22,9 +22,9 @@ export const fetchTodos = () => async (dispatch) => {
   dispatch({ type: FETCH_TODOS, payload: response.data });
 };
 
-export const createTodo = (formValues) => async (dispatch) => {
-  // const { userId } = getState().auth;
-  const response = await todos.post("/todos", { ...formValues }); // add userId here
+export const createTodo = (formValues) => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await todos.post("/todos", { ...formValues, userId }); // add userId here
 
   dispatch({ type: CREATE_TODO, payload: response.data });
   //programmatic navigation to take user back to the todoList from the custom history.js file

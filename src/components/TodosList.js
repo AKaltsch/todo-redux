@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { startSubmit } from "redux-form";
 import { fetchTodos } from "../actions";
 
 class TodosList extends Component {
   componentDidMount() {
     this.props.fetchTodos();
+  }
+
+  renderAdmin(todo) {
+    if (startSubmit.userId === this.props.currentUserId) {
+      return (
+        <div className="right floated content">
+          <button className="ui button primary">Edit</button>
+          <button className="ui button negative">Delete</button>
+        </div>
+      );
+    }
   }
 
   renderCreate() {
