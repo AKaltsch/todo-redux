@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { startSubmit } from "redux-form";
-import { fetchTodos } from "../actions";
+import { fetchTodos } from "../../actions";
 
 class TodosList extends Component {
   componentDidMount() {
