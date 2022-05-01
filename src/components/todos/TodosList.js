@@ -12,8 +12,12 @@ class TodosList extends React.Component {
     if (todo.userId === this.props.currentUserId) {
       return (
         <div className="right floated content">
-          <button className="ui button primary">Edit</button>
-          <button className="ui button negative">Delete</button>
+          <Link to={`/todos/edit/${todo.id}`} className="ui button primary">
+            Edit
+          </Link>
+          <Link to={`/todos/delete/${todo.id}`} className="ui button negative">
+            Delete
+          </Link>
         </div>
       );
     }

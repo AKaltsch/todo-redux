@@ -33,7 +33,7 @@ export const fetchTodos = () => async (dispatch) => {
 export const fetchTodo = (id) => async (dispatch) => {
   const response = await todos.get(`/todos/${id}`);
 
-  dispatch({ FETCH_TODO, payload: response.data });
+  dispatch({ type: FETCH_TODO, payload: response.data });
 };
 
 export const createTodo = (formValues) => async (dispatch, getState) => {
