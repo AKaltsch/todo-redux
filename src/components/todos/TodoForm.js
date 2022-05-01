@@ -13,6 +13,7 @@ class TodoForm extends Component {
   }
 
   renderInput = ({ input, label, meta }) => {
+    // console.log(input, meta);
     const className = `field ${meta.error && meta.touched ? "error" : ""}`;
     return (
       <div className={className}>
@@ -24,11 +25,12 @@ class TodoForm extends Component {
   };
 
   onSubmit = (formValues) => {
+    console.log(formValues);
     this.props.onSubmit(formValues);
   };
 
   render() {
-    console.log(this.renderInput);
+    // console.log(this.props);
     return (
       <form
         onSubmit={this.props.handleSubmit(this.onSubmit)}
@@ -47,7 +49,6 @@ class TodoForm extends Component {
 }
 
 const validate = (formValues) => {
-  console.log("validation");
   const errors = {};
   if (!formValues.task) {
     errors.task = "You must enter a task";
