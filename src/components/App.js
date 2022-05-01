@@ -14,7 +14,7 @@ const App = () => {
           <Header />
           <Switch>
             <Route path="/" exact component={TodosList} />
-            <Route path="/create" component={TodoCreate} />
+            <Route path="/todos/create" component={TodoCreate} />
           </Switch>
         </div>
       </Router>

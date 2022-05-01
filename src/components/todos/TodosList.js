@@ -1,16 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { startSubmit } from "redux-form";
 import { fetchTodos } from "../../actions";
 
-class TodosList extends Component {
+class TodosList extends React.Component {
   componentDidMount() {
     this.props.fetchTodos();
   }
 
   renderAdmin(todo) {
-    if (startSubmit.userId === this.props.currentUserId) {
+    if (todo.userId === this.props.currentUserId) {
       return (
         <div className="right floated content">
           <button className="ui button primary">Edit</button>
@@ -24,7 +23,7 @@ class TodosList extends Component {
     if (this.props.isSignedIn) {
       return (
         <div>
-          <Link to="/create" className="ui primary button">
+          <Link to="/todos/create" className="ui primary button">
             Create Todo
           </Link>
         </div>
@@ -46,7 +45,7 @@ class TodosList extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ textAlign: "left" }}>
         <h2>Todos</h2>
         <div className="ui celled list">{this.renderList()}</div>
         {this.renderCreate()}

@@ -28,6 +28,7 @@ class TodoForm extends Component {
   };
 
   render() {
+    console.log(this.renderInput);
     return (
       <form
         onSubmit={this.props.handleSubmit(this.onSubmit)}
@@ -46,6 +47,7 @@ class TodoForm extends Component {
 }
 
 const validate = (formValues) => {
+  console.log("validation");
   const errors = {};
   if (!formValues.task) {
     errors.task = "You must enter a task";
