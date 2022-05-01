@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TodosList from "./todos/TodosList";
 import TodoCreate from "./todos/TodoCreate";
 
@@ -9,7 +9,9 @@ import history from "../history";
 const App = () => {
   return (
     <div className="ui container">
-      <Router history={history}>
+      {/* !!!Come back later!!! change BrowserRouter to just <Router> */}
+      {/* <Router history={history}> ......... had trouble getting the page to render with history */}
+      <Router>
         <div>
           <Header />
           <Switch>
