@@ -35,6 +35,7 @@ class TodosList extends React.Component {
     return this.props.todos.map((todo) => {
       return (
         <div className="item" key={todo.id}>
+          {this.renderAdmin(todo)}
           <i className="large middle aligned icon clock" />
           <div className="content">{todo.task}</div>
           <div className="description">{todo.description}</div>

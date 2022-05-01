@@ -1,5 +1,10 @@
 import _ from "lodash";
-import { FETCH_TODOS, CREATE_TODO } from "../actions/types";
+import {
+  FETCH_TODOS,
+  CREATE_TODO,
+  EDIT_TODO,
+  DELETE_TODO,
+} from "../actions/types";
 
 const streamReducer = (state = {}, action) => {
   switch (action.type) {
@@ -7,6 +12,10 @@ const streamReducer = (state = {}, action) => {
       return { ...state, ..._.mapKeys(action.payload, "id") };
     case CREATE_TODO:
       return { ...state, [action.payload.id]: action.payload };
+    case EDIT_TODO:
+      return { ...state, [action.payload.id]: action.payload };
+    case DELETE_TODO:
+      return _.omit(state, action.payload);
 
     default:
       return state;
