@@ -4,12 +4,15 @@ import {
   CREATE_TODO,
   EDIT_TODO,
   DELETE_TODO,
+  FETCH_TODO,
 } from "../actions/types";
 
 const streamReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_TODOS:
       return { ...state, ..._.mapKeys(action.payload, "id") };
+    case FETCH_TODO:
+      return { ...state, [action.payload.id]: action.payload };
     case CREATE_TODO:
       return { ...state, [action.payload.id]: action.payload };
     case EDIT_TODO:
