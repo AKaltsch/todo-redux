@@ -14,3 +14,6 @@ I created this app as a way to demonstrate my understanding of both Redux and Go
 
 #### Auth Reducer ####
 ![Screen Shot 2022-05-05 at 4 31 30 PM](https://user-images.githubusercontent.com/79191638/167043257-4788b01a-047f-4c47-837e-d43ce8c2fd6c.png)
+
+## Google Auth ##
+![Screen Shot 2022-05-05 at 4 36 14 PM](https://user-images.githubusercontent.com/79191638/167043776-2a942c26-d13b-488b-9f32-842838718d6e.png)
