@@ -5,6 +5,7 @@ const Modal = (props) => {
   //   console.log(props);
   return ReactDOM.createPortal(
     <div onClick={props.onDismiss} className="ui dimmer modals visible active">
+      {/* stopPropagation stops the onCLick from being passed down to the children of the parent div */}
       <div
         onClick={(e) => e.stopPropagation()}
         className="ui standard modal visible active"
