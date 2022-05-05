@@ -6,3 +6,5 @@ I created this app as a way to demonstrate my understanding of both Redux and Go
 ## REDUX ##
 ### Actions ###
 ![todos -actions](https://user-images.githubusercontent.com/79191638/167042612-dabf8671-f2df-47d6-b2b6-cb042721e8fa.png)
+
+### Reducers ###
