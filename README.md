@@ -11,3 +11,6 @@ I created this app as a way to demonstrate my understanding of both Redux and Go
 
 #### Todo Reducer ####
 ![Screen Shot 2022-05-05 at 4 29 49 PM](https://user-images.githubusercontent.com/79191638/167043111-ea5f44bf-73ee-4fc1-ba51-3de5cd641c77.png)
+
+#### Auth Reducer ####
+![Screen Shot 2022-05-05 at 4 31 30 PM](https://user-images.githubusercontent.com/79191638/167043257-4788b01a-047f-4c47-837e-d43ce8c2fd6c.png)
