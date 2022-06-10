@@ -7,7 +7,7 @@ import {
   FETCH_TODO,
 } from "../actions/types";
 
-const streamReducer = (state = {}, action) => {
+const todoReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_TODOS:
       return { ...state, ..._.mapKeys(action.payload, "id") };
@@ -25,4 +25,4 @@ const streamReducer = (state = {}, action) => {
   }
 };
 
-export default streamReducer;
+export default todoReducer;
